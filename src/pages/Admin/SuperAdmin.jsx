@@ -194,7 +194,7 @@ export default function SuperAdmin() {
           </div>
         </div>
         
-        <div style={{ overflowX: 'auto' }}>
+        <div style={{ width: '100%' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
             <thead className="bg-elevated text-secondary text-sm">
               <tr>
@@ -241,7 +241,10 @@ export default function SuperAdmin() {
                         <div 
                           className="card animate-fade-in" 
                           style={{ 
-                            position: 'absolute', right: '40px', top: '20px', 
+                            position: 'absolute', 
+                            right: '40px', 
+                            top: index >= filteredShops.length - 2 ? 'auto' : '20px', 
+                            bottom: index >= filteredShops.length - 2 ? '20px' : 'auto',
                             padding: '8px', zIndex: 20, minWidth: '160px',
                             display: 'flex', flexDirection: 'column', gap: '4px',
                             boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.3)'
