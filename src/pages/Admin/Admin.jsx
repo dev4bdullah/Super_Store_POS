@@ -20,7 +20,7 @@ const platformGrowth = [
   { month: 'Jun', activeShops: 42, newSignups: 8 },
 ];
 
-export default function SuperAdmin() {
+export default function Admin() {
   const [shops, setShops] = useState([
     { id: '1', name: 'Al-Madina Super Store', status: 'active', joined: '2026-03-15', revenue: 'Rs 145,000' },
     { id: '2', name: 'Khan Garments', status: 'held', joined: '2026-03-20', revenue: 'Rs 0' },

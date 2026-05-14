@@ -5,7 +5,7 @@ import Logo from './components/Logo';
 import './App.css';
 
 // Pages
-import SuperAdmin from './pages/Admin/SuperAdmin';
+import Admin from './pages/Admin/Admin';
 import Dashboard from './pages/Shop/Dashboard';
 import Inventory from './pages/Shop/Inventory';
 import Settings from './pages/Shop/Settings';
@@ -150,7 +150,7 @@ function App() {
           <RequireAuth roleRequired="superadmin">
             <Layout role={userRole} onLogout={handleLogout}>
               <Routes>
-                <Route path="/" element={<SuperAdmin />} />
+                <Route path="/" element={<Admin />} />
                 <Route path="*" element={<Navigate to="/admin" replace />} />
               </Routes>
             </Layout>
