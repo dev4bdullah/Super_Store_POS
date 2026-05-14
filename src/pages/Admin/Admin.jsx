@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MoreVertical, CheckCircle, XCircle, Search, X, TrendingUp, Users, Activity } from 'lucide-react';
 import { AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
@@ -21,12 +21,26 @@ const platformGrowth = [
 ];
 
 export default function Admin() {
-  const [shops, setShops] = useState([
-    { id: '1', name: 'Al-Madina Super Store', status: 'active', joined: '2026-03-15', revenue: 'Rs 145,000' },
-    { id: '2', name: 'Khan Garments', status: 'held', joined: '2026-03-20', revenue: 'Rs 0' },
-    { id: '3', name: 'Fresh Mart Point', status: 'active', joined: '2026-04-01', revenue: 'Rs 12,500' },
-    { id: '4', name: 'Zahid Pharmacy', status: 'active', joined: '2026-05-10', revenue: 'Rs 45,000' }
-  ]);
+  const [shops, setShops] = useState(() => {
+    const savedShops = localStorage.getItem('pos_admin_shops');
+    if (savedShops) {
+      try {
+        return JSON.parse(savedShops);
+      } catch (e) {
+        console.error("Failed to parse shops from local storage", e);
+      }
+    }
+    return [
+      { id: '1', name: 'Al-Madina Super Store', status: 'active', joined: '2026-03-15', revenue: 'Rs 145,000' },
+      { id: '2', name: 'Khan Garments', status: 'held', joined: '2026-03-20', revenue: 'Rs 0' },
+      { id: '3', name: 'Fresh Mart Point', status: 'active', joined: '2026-04-01', revenue: 'Rs 12,500' },
+      { id: '4', name: 'Zahid Pharmacy', status: 'active', joined: '2026-05-10', revenue: 'Rs 45,000' }
+    ];
+  });
+
+  useEffect(() => {
+    localStorage.setItem('pos_admin_shops', JSON.stringify(shops));
+  }, [shops]);
   
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [openActionMenuId, setOpenActionMenuId] = useState(null);
