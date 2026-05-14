@@ -14,7 +14,7 @@ const weeklyData = [
 const categoryData = [
   { name: 'Grocery', value: 12000 },
   { name: 'Dairy', value: 8000 },
-  { name: 'Medicine', value: 15000 },
+
   { name: 'Snacks', value: 5000 },
   { name: 'Personal Care', value: 6500 }
 ];

@@ -43,8 +43,7 @@ export default function Terminal({ onLogout }) {
     { id: '6', name: 'Super Crisp Chips', price: 50, icon: '🥔' },
     { id: '7', name: 'Daily Bread', price: 120, icon: '🍞' },
     { id: '8', name: 'Local Eggs Dozen', price: 400, icon: '🥚' },
-    { id: '9', name: 'Panadol 500mg', price: 40, icon: '💊' },
-    { id: '10', name: 'Brufen 400mg', price: 80, icon: '💊' },
+
     { id: '11', name: 'Dettol Soap 115g', price: 110, icon: '🧼' },
     { id: '12', name: 'Colgate Toothpaste', price: 150, icon: '🪥' },
     { id: '13', name: 'Tapal Danedar 400g', price: 750, icon: '☕' },

@@ -11,8 +11,7 @@ export default function Inventory() {
     { id: '6', name: 'Super Crisp Chips', price: 50, stock: 200, category: 'Snacks', icon: '🥔' },
     { id: '7', name: 'Daily Bread', price: 120, stock: 30, category: 'Bakery', icon: '🍞' },
     { id: '8', name: 'Local Eggs Dozen', price: 400, stock: 25, category: 'Dairy', icon: '🥚' },
-    { id: '9', name: 'Panadol 500mg', price: 40, stock: 500, category: 'Medicine', icon: '💊' },
-    { id: '10', name: 'Brufen 400mg', price: 80, stock: 250, category: 'Medicine', icon: '💊' },
+
     { id: '11', name: 'Dettol Soap 115g', price: 110, stock: 80, category: 'Personal Care', icon: '🧼' },
     { id: '12', name: 'Colgate Toothpaste', price: 150, stock: 65, category: 'Personal Care', icon: '🪥' },
     { id: '13', name: 'Tapal Danedar 400g', price: 750, stock: 40, category: 'Grocery', icon: '☕' },

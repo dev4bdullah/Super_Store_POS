@@ -50,7 +50,7 @@ Designed for high-speed retail environments 🏪:
   - 📝 A clean data table displaying current stock levels, prices, categories, and icons.
   - ⚠️ Includes low-stock indicators (visually highlighting items running out of stock).
   - 🪟 Full modal-based interface for quickly adding new products ➕ or modifying existing ones ✏️.
-  - 🎁 Comes pre-loaded with **50 mock products** across categories like Grocery 🍞, Dairy 🥛, Medicine 💊, Snacks 🍪, and Personal Care 🧼.
+  - 🎁 Comes pre-loaded with **50 mock products** across categories like Grocery 🍞, Dairy 🥛, Snacks 🍪, and Personal Care 🧼.
 - ⚙️ **Dynamic Store Settings**: 
   - 💾 Forms to update store information that persists across browser reloads using the native `localStorage` API.
 
