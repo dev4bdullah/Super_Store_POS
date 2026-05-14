@@ -1,0 +1,115 @@
+/* Animated Gradient Background */
+@keyframes meshGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.login-bg {
+  background: linear-gradient(-45deg, #4f46e5, #0ea5e9, #3b82f6, #8b5cf6);
+  background-size: 400% 400%;
+  animation: meshGradient 15s ease infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  .login-bg {
+    background: linear-gradient(-45deg, #1e1b4b, #312e81, #1e3a8a, #0f172a);
+    background-size: 400% 400%;
+    animation: meshGradient 15s ease infinite;
+  }
+}
+
+.login-glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 24px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .login-glass-card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.role-btn {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .role-btn {
+    background: rgba(30, 41, 59, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+}
+
+.role-btn:hover {
+  transform: translateY(-4px);
+  background: #ffffff !important;
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 12px 24px rgba(59, 130, 246, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+  .role-btn:hover {
+    background: rgba(30, 41, 59, 0.9) !important;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.role-icon-wrapper {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: var(--accent-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .role-icon-wrapper {
+    background: rgba(59, 130, 246, 0.2);
+  }
+}
+
+.role-btn:hover .role-icon-wrapper {
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+  color: white !important;
+  transform: scale(1.15) rotate(8deg);
+  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
+}
+
+.logo-container {
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-container::after {
+  content: '';
+  position: absolute;
+  top: -150%;
+  left: -150%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(to bottom right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 40%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+  transform: rotate(45deg);
+  animation: shimmer 4s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { transform: translateY(-30%) translateX(-30%) rotate(45deg); }
+  100% { transform: translateY(30%) translateX(30%) rotate(45deg); }
+}
+
+.animated-title {
+  background: linear-gradient(to right, var(--text-primary), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
